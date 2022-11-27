@@ -5,4 +5,6 @@
     <string name="nameDesc">Please enter your name</string>
     <string name="name">Name</string>
     <string name="start">START</string>
+    <string name="submitBtn">Submit</string>
+    <string name="contentDesc">flag of country</string>
 </resources>

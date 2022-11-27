@@ -13,7 +13,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         binding.startButton.setOnClickListener{
             if(binding.nameEditText.text.toString().isEmpty()) {
-                binding.nameEditText.hint = "You MUST enter your name"
+                binding.nameInputText.hint = "you MUST enter your name!"
             } else {
                 val intent = Intent(this, QuestionsActivity::class.java)
                 startActivity(intent)

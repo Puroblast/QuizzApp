@@ -1,9 +1,137 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true"
     tools:context=".QuestionsActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/question"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="What country does this flag belong to?"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="20dp"/>
+
+        <ImageView
+            android:id="@+id/flagImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:src = "@drawable/argentina"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:contentDescription="@string/contentDesc" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <ProgressBar
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:max="10"
+                android:indeterminate="false"
+                android:minHeight="50dp"
+                android:progress="0"
+                android:layout_weight="1"
+                android:paddingStart="20dp"/>
+
+            <TextView
+                android:id="@+id/progressCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                tools:text = "0/10"
+                android:gravity="center"
+                android:padding="15dp"/>
+
+        </LinearLayout>
+
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:layout_marginBottom="20dp">
+            
+            <TextView
+                android:id="@+id/answerOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/default_border_bg"
+                tools:text="Argentina"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="5"
+                tools:ignore="NestedWeights" />
+
+            <TextView
+                android:id="@+id/answerTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/default_border_bg"
+                tools:text="Argentina"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="5"/>
+
+            <TextView
+                android:id="@+id/answerThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/default_border_bg"
+                tools:text="Argentina"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="5"/>
+
+            <TextView
+                android:id="@+id/answerFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/default_border_bg"
+                tools:text="Argentina"
+                android:textSize="20sp"
+                android:layout_marginBottom="10dp"
+                android:gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="5"/>
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/submitBtn"
+                android:textSize="20sp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_weight="1"/>
+            
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
