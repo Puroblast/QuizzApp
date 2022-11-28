@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
+    android:id="@+id/scrollView"
     tools:context=".QuestionsActivity">
 
     <LinearLayout
@@ -40,6 +41,7 @@
             android:orientation="horizontal">
 
             <ProgressBar
+                android:id="@+id/progressBar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 style="@style/Widget.AppCompat.ProgressBar.Horizontal"
@@ -77,6 +79,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/default_border_bg"
                 tools:text="Argentina"
+                android:onClick="setup"
                 android:textSize="20sp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
@@ -90,6 +93,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/default_border_bg"
                 tools:text="Argentina"
+                android:onClick="setup"
                 android:textSize="20sp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
@@ -102,6 +106,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/default_border_bg"
                 tools:text="Argentina"
+                android:onClick="setup"
                 android:textSize="20sp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
@@ -114,6 +119,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/default_border_bg"
                 tools:text="Argentina"
+                android:onClick="setup"
                 android:textSize="20sp"
                 android:layout_marginBottom="10dp"
                 android:gravity="center"
