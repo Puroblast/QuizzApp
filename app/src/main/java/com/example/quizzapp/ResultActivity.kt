@@ -20,9 +20,8 @@ class ResultActivity : AppCompatActivity() {
         binding.scoreView.text = "Your result is : $correctAnswers out of $totalQuestions"
         binding.nameView.text = name
 
-        binding.finishBtn.setOnClickListener{
-            startActivity(Intent(this,MainActivity::class.java))
+        binding.finishBtn.setOnClickListener {
+            startActivity(Intent(this, MainActivity::class.java))
         }
-
     }
 }

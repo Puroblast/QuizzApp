@@ -20,8 +20,11 @@ class QuestionsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_questions)
+        setListeners()
         setupQuestion()
+    }
 
+    private fun setListeners() {
         binding.answerOne.setOnClickListener {
             clear()
             binding.answerOne.setBackgroundResource(R.drawable.clicked_view_bg)
@@ -48,27 +51,26 @@ class QuestionsActivity : AppCompatActivity() {
         }
 
         binding.submitBtn.setOnClickListener {
-            if(selectedPosition == -1) {
-                Toast.makeText(this,"You should choose answer",Toast.LENGTH_SHORT).show()
+            if (selectedPosition == -1) {
+                Toast.makeText(this, "You should choose answer", Toast.LENGTH_SHORT).show()
             } else if (binding.submitBtn.text == "FINISH") {
                 result()
             } else if (binding.submitBtn.text == "Next Question") {
-                questionNumber +=1
+                questionNumber += 1
                 setupQuestion()
             } else {
                 binding.submitBtn.text = "Next Question"
                 check()
             }
         }
-
     }
 
     private fun result() {
         val name = intent.getStringExtra(Constants.USER_NAME)
-        val intent = Intent(this,ResultActivity::class.java)
-        intent.putExtra(Constants.CORRECT_ANSWERS,correctAnswers.toString())
-        intent.putExtra(Constants.TOTAL_QUESTIONS,questionList.size.toString())
-        intent.putExtra(Constants.USER_NAME,name)
+        val intent = Intent(this, ResultActivity::class.java)
+        intent.putExtra(Constants.CORRECT_ANSWERS, correctAnswers.toString())
+        intent.putExtra(Constants.TOTAL_QUESTIONS, questionList.size.toString())
+        intent.putExtra(Constants.USER_NAME, name)
         startActivity(intent)
         finish()
     }
@@ -87,7 +89,7 @@ class QuestionsActivity : AppCompatActivity() {
 
     }
 
-    fun clear() {
+    private fun clear() {
         binding.answerOne.setBackgroundResource(R.drawable.default_border_bg)
         binding.answerTwo.setBackgroundResource(R.drawable.default_border_bg)
         binding.answerThree.setBackgroundResource(R.drawable.default_border_bg)
@@ -96,7 +98,7 @@ class QuestionsActivity : AppCompatActivity() {
         selectedPosition = -1
     }
 
-    fun check() {
+    private fun check() {
         if (questionNumber == questionList.size - 1) {
             binding.submitBtn.text = "FINISH"
         }

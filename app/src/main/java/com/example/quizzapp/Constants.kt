@@ -2,9 +2,9 @@ package com.example.quizzapp
 
 object Constants {
 
-    const val USER_NAME : String = "user_name"
-    const val CORRECT_ANSWERS : String = "0"
-    const val TOTAL_QUESTIONS : String = "correct_answers"
+    const val USER_NAME: String = "user_name"
+    const val CORRECT_ANSWERS: String = "0"
+    const val TOTAL_QUESTIONS: String = "correct_answers"
 
     fun getQuestions(): ArrayList<Question> {
 
@@ -14,7 +14,7 @@ object Constants {
                 1,
                 "What country does this flag belong to?",
                 R.drawable.belgium,
-                listOf("Belgium","Argentina","Brazil","Jamaica"),
+                listOf("Belgium", "Argentina", "Brazil", "Jamaica"),
                 0
             )
         val questionTwo =
@@ -22,7 +22,7 @@ object Constants {
                 2,
                 "What country does this flag belong to?",
                 R.drawable.brazil,
-                listOf("Brazil","Argentina","Cameroon","Russia"),
+                listOf("Brazil", "Argentina", "Cameroon", "Russia"),
                 0
             )
         val questionThree =
@@ -30,7 +30,7 @@ object Constants {
                 3,
                 "What country does this flag belong to?",
                 R.drawable.argentina,
-                listOf("Serbia","Argentina","Brazil","Jamaica"),
+                listOf("Serbia", "Argentina", "Brazil", "Jamaica"),
                 1
             )
         val questionFour =
@@ -38,7 +38,7 @@ object Constants {
                 4,
                 "What country does this flag belong to?",
                 R.drawable.denmark,
-                listOf("Belgium","Denmark","Brazil","Mexico"),
+                listOf("Belgium", "Denmark", "Brazil", "Mexico"),
                 1
             )
         val questionFive =
@@ -46,7 +46,7 @@ object Constants {
                 5,
                 "What country does this flag belong to?",
                 R.drawable.fiji,
-                listOf("Russia","France","Netherlands","Fiji"),
+                listOf("Russia", "France", "Netherlands", "Fiji"),
                 3
             )
         val questionSix =
@@ -54,7 +54,7 @@ object Constants {
                 6,
                 "What country does this flag belong to?",
                 R.drawable.australia,
-                listOf("Australia","Kenia","New Zealand","Japan"),
+                listOf("Australia", "Kenia", "New Zealand", "Japan"),
                 0
             )
         val questionSeven =
@@ -62,7 +62,7 @@ object Constants {
                 7,
                 "What country does this flag belong to?",
                 R.drawable.germany,
-                listOf("USA","Germany","China","Mexico"),
+                listOf("USA", "Germany", "China", "Mexico"),
                 1
             )
         val questionEight =
@@ -70,7 +70,7 @@ object Constants {
                 8,
                 "What country does this flag belong to?",
                 R.drawable.india,
-                listOf("Russia","France","India","Maldives"),
+                listOf("Russia", "France", "India", "Maldives"),
                 2
             )
         val questionNine =
@@ -78,7 +78,7 @@ object Constants {
                 9,
                 "What country does this flag belong to?",
                 R.drawable.kuwait,
-                listOf("Ukraine","Kuwait","Belgium","Japan"),
+                listOf("Ukraine", "Kuwait", "Belgium", "Japan"),
                 1
             )
 
@@ -87,7 +87,7 @@ object Constants {
                 10,
                 "What country does this flag belong to?",
                 R.drawable.new_zealand,
-                listOf("Italy","Israel","Kazakhstan","New Zealand"),
+                listOf("Italy", "Israel", "Kazakhstan", "New Zealand"),
                 3
             )
         questions.add(questionOne)
