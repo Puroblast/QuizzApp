@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
                 binding.nameInputText.hint = "you MUST enter your name!"
             } else {
                 val intent = Intent(this, QuestionsActivity::class.java)
+                intent.putExtra(Constants.USER_NAME,binding.nameEditText.text.toString())
                 startActivity(intent)
                 finish()
             }

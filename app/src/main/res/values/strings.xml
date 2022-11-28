@@ -7,4 +7,8 @@
     <string name="start">START</string>
     <string name="submitBtn">Submit</string>
     <string name="contentDesc">flag of country</string>
+    <string name="result">Result</string>
+    <string name="trophy_image">Trophy image</string>
+    <string name="congratulations">Congratulations!</string>
+    <string name="finish">Finish</string>
 </resources>

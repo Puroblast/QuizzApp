@@ -2,6 +2,10 @@ package com.example.quizzapp
 
 object Constants {
 
+    const val USER_NAME : String = "user_name"
+    const val CORRECT_ANSWERS : String = "0"
+    const val TOTAL_QUESTIONS : String = "correct_answers"
+
     fun getQuestions(): ArrayList<Question> {
 
         val questions = ArrayList<Question>()
@@ -27,7 +31,7 @@ object Constants {
                 "What country does this flag belong to?",
                 R.drawable.argentina,
                 listOf("Serbia","Argentina","Brazil","Jamaica"),
-                0
+                1
             )
         val questionFour =
             Question(

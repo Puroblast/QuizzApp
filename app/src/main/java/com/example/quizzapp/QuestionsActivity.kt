@@ -1,5 +1,6 @@
 package com.example.quizzapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -63,7 +64,13 @@ class QuestionsActivity : AppCompatActivity() {
     }
 
     private fun result() {
-        TODO("Not yet implemented")
+        val name = intent.getStringExtra(Constants.USER_NAME)
+        val intent = Intent(this,ResultActivity::class.java)
+        intent.putExtra(Constants.CORRECT_ANSWERS,correctAnswers.toString())
+        intent.putExtra(Constants.TOTAL_QUESTIONS,questionList.size.toString())
+        intent.putExtra(Constants.USER_NAME,name)
+        startActivity(intent)
+        finish()
     }
 
     private fun setupQuestion() {
